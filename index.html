@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>Poojitha Pesala | Portfolio</title>
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect"
+  href="https://fonts.googleapis.com">
+
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0f172a;
+      color:#f8fafc;
+    }
+
+    /* NAVBAR */
+
+    nav{
+
+      width:100%;
+      padding:18px 10%;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      position:fixed;
+      top:0;
+
+      z-index:1000;
+
+      background:rgba(15,23,42,0.85);
+
+      backdrop-filter:blur(14px);
+
+      border-bottom:
+      1px solid rgba(255,255,255,0.08);
+
+    }
+
+    nav h2{
+      color:#38bdf8;
+    }
+
+    /* MENU */
+
+    .nav-links{
+      display:flex;
+      gap:25px;
+      list-style:none;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#38bdf8;
+    }
+
+    /* HAMBURGER */
+
+    .menu-toggle{
+      display:none;
+      font-size:30px;
+      color:white;
+      cursor:pointer;
+    }
+
+    /* BUTTON */
+
+    .dark-btn{
+
+      padding:10px 20px;
+
+      border:none;
+
+      border-radius:30px;
+
+      background:
+      linear-gradient(
+      135deg,
+      #3b82f6,
+      #06b6d4
+      );
+
+      color:white;
+
+      cursor:pointer;
+
+    }
+
+    /* HERO */
+
+    header{
+
+      min-height:100vh;
+
+      background:
+      linear-gradient(
+      135deg,
+      #0f172a,
+      #111827,
+      #1e293b
+      );
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      padding:120px 10%;
+      flex-wrap:wrap;
+
+    }
+
+    .hero-text h1{
+      font-size:60px;
+      margin-bottom:15px;
+    }
+
+    .hero-text span{
+      color:#38bdf8;
+    }
+
+    .typing{
+      font-size:24px;
+      color:#cbd5e1;
+      margin-bottom:25px;
+      height:40px;
+    }
+
+    .btn{
+
+      display:inline-block;
+
+      padding:14px 30px;
+
+      border-radius:40px;
+
+      background:
+      linear-gradient(
+      135deg,
+      #3b82f6,
+      #06b6d4
+      );
+
+      color:white;
+
+      text-decoration:none;
+
+      transition:0.3s;
+
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+    }
+
+    .profile img{
+
+      width:320px;
+      height:320px;
+
+      border-radius:50%;
+
+      object-fit:cover;
+
+      border:
+      4px solid rgba(255,255,255,0.15);
+
+    }
+
+    /* SECTION */
+
+    section{
+      padding:90px 10%;
+    }
+
+    .title{
+      font-size:38px;
+      margin-bottom:40px;
+      position:relative;
+    }
+
+    .title::after{
+
+      content:'';
+
+      width:80px;
+      height:4px;
+
+      background:#38bdf8;
+
+      position:absolute;
+
+      left:0;
+      bottom:-10px;
+
+    }
+
+    /* CARD */
+
+    .card,
+    .project-card,
+    .contact-box{
+
+      background:rgba(30,41,59,0.75);
+
+      border:
+      1px solid rgba(255,255,255,0.08);
+
+      border-radius:24px;
+
+      padding:30px;
+
+      margin-bottom:25px;
+
+    }
+
+    /* SKILLS */
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+    }
+
+    .skill{
+
+      padding:12px 22px;
+
+      border-radius:30px;
+
+      background:
+      rgba(255,255,255,0.08);
+
+    }
+
+    /* PROJECTS */
+
+    .projects{
+
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(280px,1fr));
+
+      gap:30px;
+
+    }
+
+    .project-card{
+      overflow:hidden;
+      padding:0;
+    }
+
+    .project-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:25px;
+    }
+
+    .project-content h3{
+      color:#38bdf8;
+      margin-bottom:12px;
+    }
+
+    .project-content p{
+      margin-bottom:15px;
+    }
+
+    .project-content a{
+      color:#38bdf8;
+      text-decoration:none;
+    }
+
+    /* CONTACT */
+
+    .contact-box p{
+      margin-bottom:15px;
+    }
+
+    /* FOOTER */
+
+    footer{
+
+      background:#020617;
+
+      text-align:center;
+
+      padding:30px;
+
+      color:#94a3b8;
+
+    }
+    .resume-btn{
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ff4d6d;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.resume-btn:hover{
+  background: #e63956;
+  transform: scale(1.05);
+}
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .menu-toggle{
+        display:block;
+      }
+
+      .nav-links{
+
+        position:absolute;
+
+        top:80px;
+        right:0;
+
+        width:100%;
+
+        background:#111827;
+
+        flex-direction:column;
+
+        padding:30px 0;
+
+        display:none;
+
+      }
+
+      .nav-links.active{
+        display:flex;
+      }
+
+      header{
+        justify-content:center;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .profile{
+        margin-top:50px;
+      }
+
+      .profile img{
+        width:230px;
+        height:230px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <h2>Poojitha Pesala</h2>
+
+    <div class="menu-toggle"
+    id="menu-toggle">
+
+      ☰
+
+    </div>
+
+    <ul class="nav-links"
+    id="nav-links">
+
+      <li>
+        <a href="#home">Home</a>
+      </li>
+
+      <li>
+        <a href="#about">About</a>
+      </li>
+
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
+
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+
+      <li>
+
+        <button class="dark-btn">
+          🌙
+        </button>
+
+      </li>
+
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <header id="home">
+
+    <div class="hero-text">
+
+      <h1>
+
+        Hi, I'm
+        <span>Poojitha</span>
+
+      </h1>
+
+      <div class="typing"
+      id="typing"></div>
+
+     <a href="Poojitha_Pesala_Resume (1).pdf" download class="resume-btn">
+  Download Resume
+</a>
+
+    </div>
+
+    <div class="profile">
+
+      <img src="profile.jpeg"
+      alt="profile">
+
+    </div>
+
+  </header>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2 class="title">
+      About Me
+    </h2>
+
+    <div class="card">
+
+      <p>I am a passionate B.Tech student with a strong interest in Python programming, Web Development, and Data Analytics. I enjoy learning new technologies and building projects that improve my practical and problem-solving skills. Currently, I am developing my knowledge in Python, SQL, HTML, CSS, and JavaScript while working on real-world projects. I am a quick learner, self-motivated, and always eager to grow as a developer by exploring innovative technologies and gaining hands-on experience.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <h2 class="title">
+      Skills
+    </h2>
+
+    <div class="skills">
+
+      <div class="skill">Python</div>
+
+      <div class="skill">HTML</div>
+
+      <div class="skill">CSS</div>
+
+      <div class="skill">JavaScript</div>
+
+      <div class="skill">SQL</div>
+
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <h2 class="title">
+      Projects
+    </h2>
+
+    <div class="projects">
+
+      <div class="project-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+        alt="">
+
+        <div class="project-content">
+
+          <h3>Portfolio Website</h3>
+
+          <p>
+
+            Responsive portfolio website
+            using HTML CSS and JavaScript.
+
+          </p>
+
+        </div>
+
+      </div>
+      <div class="project-card">
+
+        <img
+        src="weather app.jpg"
+        alt="Weather App">
+
+        <div class="project-content">
+
+          <h3><a href="https://79yapucfwm2zunncs4nkcp.streamlit.app/weather-app" target="_blank">Weather App developed</a></h3>
+
+          <p>
+
+            A weather app that provides real-time weather information using a public API.
+
+          </p>
+
+        </div>
+
+    </div>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- CERTIFICATIONS -->
+
+  <section>
+
+    <h2 class="title">
+      Certifications
+    </h2>
+
+    <div class="card">
+
+      <h3>AWS Essentials</h3>
+
+      <br>
+
+      <a href="aws_essential.pdf">
+
+        Show Certificate
+
+      </a>
+    
+    </div>
+    <div class ="card">
+      <h3>Data Analyst-Big 4 Ready</h3>
+
+      <br>
+
+      <a href="Data Analyst - Big 4 Ready-Certificate.pdf">
+
+        Show Certificate
+
+      </a>
+    </div>
+    <div class ="card">
+      <h3>Delolite</h3>
+
+      <br>
+
+      <a href="delolite.pdf">
+
+        Show Certificate
+
+      </a>
+    </div>
+     <div class ="card">
+      <h3>python essentials</h3>
+
+      <br>
+
+      <a href="python_essentials1.pdf">
+
+        Show Certificate
+
+      </a>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2 class="title">
+      Contact Me
+    </h2>
+
+    <div class="contact-box">
+
+      <p>
+        📧 poojithareddypesala@gmail.com
+      </p>
+
+      <p>
+        📱 +91 7569580954
+      </p>
+     <p>
+    💼 
+    <a href="https://www.linkedin.com/in/pesala-poojitha-reddy" 
+    target="_blank">
+      LinkedIn Profile
+    </a>
+  </p>
+
+  <p>
+    💻 
+    <a href="https://github.com/poojithareddypesala-arch" 
+    target="_blank">
+      GitHub Profile
+    </a>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+
+      © 2026 Poojitha Pesala
+
+    </p>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    // TYPING EFFECT
+
+    const text = [
+
+      "Python Developer",
+      "Web Developer",
+      "Data Analyst"
+
+    ];
+
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+
+    function type(){
+
+      if(count === text.length){
+        count = 0;
+      }
+
+      currentText = text[count];
+
+      letter =
+      currentText.slice(0, ++index);
+
+      document.getElementById("typing")
+      .textContent = letter;
+
+      if(letter.length === currentText.length){
+
+        count++;
+
+        index = 0;
+
+        setTimeout(type,1000);
+
+      }
+
+      else{
+
+        setTimeout(type,120);
+
+      }
+
+    }
+
+    type();
+
+    // HAMBURGER
+
+    const menuToggle =
+    document.getElementById("menu-toggle");
+
+    const navLinks =
+    document.getElementById("nav-links");
+
+    menuToggle.onclick = function(){
+
+      navLinks.classList.toggle("active");
+
+    }
+
+  </script>
+
+</body>
+
+</html>
